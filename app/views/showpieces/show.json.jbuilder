@@ -1,0 +1,1 @@
+json.extract! @showpiece, :id, :name, :creation_century, :description, :insurance, :height, :width, :length, :temperature_control, :wet_control, :people_protection, :collection_id_id, :created_at, :updated_at

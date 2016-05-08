@@ -1,0 +1,16 @@
+= form_for @ticketprice_collection do |f|
+  - if @ticketprice_collection.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ticketprice_collection.errors.count, "error")} prohibited this ticketprice_collection from being saved:"
+      %ul
+        - @ticketprice_collection.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :ticketprice_id
+    = f.text_field :ticketprice_id
+  .field
+    = f.label :collection_id
+    = f.text_field :collection_id
+  .actions
+    = f.submit 'Save'

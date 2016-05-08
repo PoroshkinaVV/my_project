@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @showpiece.name
+%p
+  %b Creation century:
+  = @showpiece.creation_century
+%p
+  %b Description:
+  = @showpiece.description
+%p
+  %b Insurance:
+  = @showpiece.insurance
+%p
+  %b Height:
+  = @showpiece.height
+%p
+  %b Width:
+  = @showpiece.width
+%p
+  %b Length:
+  = @showpiece.length
+%p
+  %b Temperature control:
+  = @showpiece.temperature_control
+%p
+  %b Wet control:
+  = @showpiece.wet_control
+%p
+  %b People protection:
+  = @showpiece.people_protection
+%p
+  %b Collection:
+  = @showpiece.collection_id
+
+= link_to 'Edit', edit_showpiece_path(@showpiece)
+\|
+= link_to 'Back', showpieces_path

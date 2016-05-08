@@ -1,0 +1,23 @@
+%h1 Listing ticketprice_collections
+
+%table
+  %thead
+    %tr
+      %th Ticketprice
+      %th Collection
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ticketprice_collections.each do |ticketprice_collection|
+      %tr
+        %td= ticketprice_collection.ticketprice_id
+        %td= ticketprice_collection.collection_id
+        %td= link_to 'Show', ticketprice_collection
+        %td= link_to 'Edit', edit_ticketprice_collection_path(ticketprice_collection)
+        %td= link_to 'Destroy', ticketprice_collection, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ticketprice collection', new_ticketprice_collection_path

@@ -1,0 +1,43 @@
+= form_for @showpiece do |f|
+  - if @showpiece.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@showpiece.errors.count, "error")} prohibited this showpiece from being saved:"
+      %ul
+        - @showpiece.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :creation_century
+    = f.number_field :creation_century
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :insurance
+    = f.text_field :insurance
+  .field
+    = f.label :height
+    = f.text_field :height
+  .field
+    = f.label :width
+    = f.text_field :width
+  .field
+    = f.label :length
+    = f.text_field :length
+  .field
+    = f.label :temperature_control
+    = f.check_box :temperature_control
+  .field
+    = f.label :wet_control
+    = f.check_box :wet_control
+  .field
+    = f.label :people_protection
+    = f.check_box :people_protection
+  .field
+    = f.label :collection_id
+    = f.text_field :collection_id
+  .actions
+    = f.submit 'Save'

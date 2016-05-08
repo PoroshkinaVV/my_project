@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @collection.name
+%p
+  %b Start date:
+  = @collection.start_date
+%p
+  %b End date:
+  = @collection.end_date
+%p
+  %b Description:
+  = @collection.description
+
+= link_to 'Edit', edit_collection_path(@collection)
+\|
+= link_to 'Back', collections_path

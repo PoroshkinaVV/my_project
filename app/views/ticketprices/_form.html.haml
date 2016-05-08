@@ -1,0 +1,16 @@
+= form_for @ticketprice do |f|
+  - if @ticketprice.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@ticketprice.errors.count, "error")} prohibited this ticketprice from being saved:"
+      %ul
+        - @ticketprice.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :visitor_type
+    = f.text_field :visitor_type
+  .field
+    = f.label :price
+    = f.text_field :price
+  .actions
+    = f.submit 'Save'

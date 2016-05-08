@@ -1,0 +1,23 @@
+%h1 Listing ticketprices
+
+%table
+  %thead
+    %tr
+      %th Visitor type
+      %th Price
+      %th
+      %th
+      %th
+
+  %tbody
+    - @ticketprices.each do |ticketprice|
+      %tr
+        %td= ticketprice.visitor_type
+        %td= ticketprice.price
+        %td= link_to 'Show', ticketprice
+        %td= link_to 'Edit', edit_ticketprice_path(ticketprice)
+        %td= link_to 'Destroy', ticketprice, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Ticketprice', new_ticketprice_path

@@ -1,0 +1,23 @@
+%h1 Listing showroom_collections
+
+%table
+  %thead
+    %tr
+      %th Showroom
+      %th Collection
+      %th
+      %th
+      %th
+
+  %tbody
+    - @showroom_collections.each do |showroom_collection|
+      %tr
+        %td= showroom_collection.showroom_id
+        %td= showroom_collection.collection_id
+        %td= link_to 'Show', showroom_collection
+        %td= link_to 'Edit', edit_showroom_collection_path(showroom_collection)
+        %td= link_to 'Destroy', showroom_collection, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Showroom collection', new_showroom_collection_path

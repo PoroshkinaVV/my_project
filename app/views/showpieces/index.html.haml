@@ -1,0 +1,41 @@
+%h1 Listing showpieces
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Creation century
+      %th Description
+      %th Insurance
+      %th Height
+      %th Width
+      %th Length
+      %th Temperature control
+      %th Wet control
+      %th People protection
+      %th Collection
+      %th
+      %th
+      %th
+
+  %tbody
+    - @showpieces.each do |showpiece|
+      %tr
+        %td= showpiece.name
+        %td= showpiece.creation_century
+        %td= showpiece.description
+        %td= showpiece.insurance
+        %td= showpiece.height
+        %td= showpiece.width
+        %td= showpiece.length
+        %td= showpiece.temperature_control
+        %td= showpiece.wet_control
+        %td= showpiece.people_protection
+        %td= showpiece.collection_id
+        %td= link_to 'Show', showpiece
+        %td= link_to 'Edit', edit_showpiece_path(showpiece)
+        %td= link_to 'Destroy', showpiece, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Showpiece', new_showpiece_path

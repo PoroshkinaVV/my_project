@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Showroom:
+  = @showroom_collection.showroom_id
+%p
+  %b Collection:
+  = @showroom_collection.collection_id
+
+= link_to 'Edit', edit_showroom_collection_path(@showroom_collection)
+\|
+= link_to 'Back', showroom_collections_path

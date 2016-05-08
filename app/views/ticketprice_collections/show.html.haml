@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Ticketprice:
+  = @ticketprice_collection.ticketprice_id
+%p
+  %b Collection:
+  = @ticketprice_collection.collection_id
+
+= link_to 'Edit', edit_ticketprice_collection_path(@ticketprice_collection)
+\|
+= link_to 'Back', ticketprice_collections_path
