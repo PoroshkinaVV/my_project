@@ -1,3 +1,3 @@
 class Showpiece < ActiveRecord::Base
-  belongs_to :collection_id
+  belongs_to :collection
 end
